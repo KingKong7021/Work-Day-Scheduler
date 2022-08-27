@@ -1,5 +1,6 @@
 function timeBlocks() {
     var timeBlkDiv = ""
+    var currentHour = moment().hour()
     for (let i = 8; i <= 18; i++) {
         var timeHour = ""
         var savedEntry = localStorage.getItem(i) || ""
@@ -10,9 +11,17 @@ function timeBlocks() {
         } else {
             timeHour = i + "am"
         }
+        var currentColor = ""
+        if( i === currentHour){
+            currentColor = "present"
+        }else if(i < currentHour){
+            currentColor = "past"
+        }else{
+            currentColor = "future"
+        }
         timeBlkDiv += `<div class="row m-1 p-1">
         <h4 class="hour text-center">${timeHour}</h4>
-        <textarea id="${i}" value=${savedEntry} placeholder=${savedEntry} row="2" cols="90" class="description"></textarea>
+        <textarea id="${i}" value=${savedEntry} placeholder=${savedEntry} row="2" cols="90" class="description ${currentColor}"></textarea>
         <button class="saveBtn">Save</button>
         </div>`
     }
