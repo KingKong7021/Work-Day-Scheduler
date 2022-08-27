@@ -24,5 +24,7 @@ $("#currentDay").text(moment().format("dddd, MMMM Do YYYY, h:mm:ss a"))
 
 
 $(".saveBtn").on("click", function () {
-    console.log("click")
+    var textEntry = $(this).siblings(".description").val()
+    var time = $(this).siblings(".description").attr("id")
+    console.log("click",textEntry,time)
 })
