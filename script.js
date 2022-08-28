@@ -3,7 +3,8 @@ function timeBlocks() {
     var currentHour = moment().hour()
     for (let i = 8; i <= 18; i++) {
         var timeHour = ""
-        var savedEntry = localStorage.getItem(i) || ""
+        var savedEntry = localStorage.getItem(i)
+        
         if (i > 12) {
             timeHour = (i - 12) + "pm"
         } else if (i === 12) {
@@ -21,9 +22,10 @@ function timeBlocks() {
         }
         timeBlkDiv += `<div class="row m-1 p-1">
         <h4 class="hour text-center">${timeHour}</h4>
-        <textarea id="${i}" value=${savedEntry} placeholder=${savedEntry} row="2" cols="90" class="description ${currentColor}"></textarea>
+        <textarea id="${i}" value="${savedEntry}" placeholder="${savedEntry}" row="2" cols="90" class="description ${currentColor}"></textarea>
         <button class="saveBtn">Save</button>
         </div>`
+        console.log(timeBlkDiv)
     }
     $(".container").html(timeBlkDiv)
 
