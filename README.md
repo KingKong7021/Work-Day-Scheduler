@@ -12,3 +12,5 @@
 https://kingkong7021.github.io/Work-Day-Scheduler/
 
 https://github.com/KingKong7021/Work-Day-Scheduler.git
+
+![Screenshot of daily planner](https://user-images.githubusercontent.com/109927267/187085406-55f6126e-6e5c-4902-be5e-6b50b22af81c.png)
