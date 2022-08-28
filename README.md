@@ -8,3 +8,5 @@
 - Made times for past, present and future different colors
 - Possible to save notes for each time
 - Refreshing the page, saves the data still
+
+https://kingkong7021.github.io/Work-Day-Scheduler/
